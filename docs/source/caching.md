@@ -21,7 +21,7 @@ While Apollo can do basic caching based on the shape of GraphQL queries and thei
 
 This is referred to as [cache normalization](https://www.apollographql.com/docs/react/caching/cache-configuration/#data-normalization). You can read about our caching model in detail in our blog post, ["GraphQL Concepts Visualized"](https://medium.com/apollo-stack/the-concepts-of-graphql-bc68bd819be3).
 
-**By default, Apollo does not use object IDs at all**, doing caching based only on the path to the object from the root query. However, if you specify a function to generate IDs from each object, and supply it as `cacheKeyForObject` to an `ApolloClient` instance, you can decide how Apollo will identify and de-duplicate the objects returned from the server:
+**By default, Apollo does not use object IDs at all**, doing caching based only on the path to the object from the root query. However, if you specify a function to generate globally unique ID from each object, and supply it as `cacheKeyForObject` to an `ApolloClient` instance, you can decide how Apollo will identify and de-duplicate the objects returned from the server:
 
 ```swift
 apollo.cacheKeyForObject = { $0["id"] }
