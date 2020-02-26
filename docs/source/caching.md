@@ -38,7 +38,7 @@ The default cache policy is `.returnCacheDataElseFetch`, which means data will b
 Other cache polices which you can specify are: 
 
 - **`.fetchIgnoringCacheData`** to always fetch from the server, but still store results to the cache.
-- **`.fetchIgnoringCacheCompletely`** to always fetch from the server and not store results from the cache. If you're not using the cache at all, this method is preferred to `fetchIgnoringCacheData` for performance reasons.
+- **`.fetchIgnoringCacheCompletely`** to always fetch from the server and not store results to the cache. If you're not using the cache at all, this method is preferred to `fetchIgnoringCacheData` for performance reasons.
 - **`.returnCacheDataDontFetch`** to return data from the cache and never fetch from the server. This policy will return an error if cached data is not available.
 - **`.returnCacheDataAndFetch`** to return cached data immediately, *then* perform a fetch to see if there are any updates. This is mostly useful if you're watching queries, since those will be updated when the call to the server returns. 
 
